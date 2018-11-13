@@ -20,8 +20,25 @@
 
      <section id="services" class="bg-gray-dark-2">
         <div class="container">
-          <button class="btn btn-primary" @click="submit()">
-          </button>
+          <div class="count-down">
+                     <div class="fun-text">
+                         <span class="counter">25</span><span>+</span>
+                         <p>Request</p>
+                     </div>
+
+                     <div class="fun-text">
+                         <span class="counter">700</span><span>+</span>
+                         <p>Donations</p>
+                     </div>
+
+                     <div class="fun-text">
+                         <span class="counter">50</span><span>+</span>
+                         <p>Lives Changed</p>
+                     </div>
+                 </div>
+
+          <!-- <button class="btn btn-primary" @click="submit()">
+          </button> -->
 
           
             <div class="row justify-content-center">
@@ -38,7 +55,7 @@
   </div> -->
           
             <div class="row mt-5 pt-5">
-                <button @click="deleteRequest(donation_request)" v-for="donation_request in donation_requests" class="col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
+                <button @click="submit()" v-for="donation_request in donation_requests" class="col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
                     <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
                         <i class="fa fa-user divider-icon bg-primary text-white"></i>
                         <!-- <button type="button" class="float-right btn btn-danger" data-toggle="modal" data-target="#exampleModal" v-on:click="setCurrentRecipe(recipe)">

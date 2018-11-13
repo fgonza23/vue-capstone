@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
 <!-- navbar begins -->
 
 <nav class="navbar navbar-expand-md main-nav header-transparent navbar-scrollUp">
@@ -194,7 +193,7 @@
 
 </nav>
     <!-- navbar end -->
-<div id="my-main" >
+<div id="my-main">
   <router-view/>
 </div>
       <!-- footer begins -->
