@@ -41,7 +41,7 @@
             </div>
             </div>
           <div>
-          <input type="submit" class="btn btn-primary" value="Submit">
+          <input @click="submit()" type="submit" class="btn btn-primary" value="Submit">
           </div>
         </form>
       </div>
@@ -71,8 +71,9 @@ export default {
         family_size: this.family_size,
         meal: this.meal
       };
-      axios
-        .post("http://localhost:3000/api/donation_requests", params)
+      axios.all
+        axios.post("http://localhost:3000/api/donation_requests", params),
+        axios.get("http://localhost:3000/api/close_box")
         .then(response => {
           this.$router.push("/donation_requests");
         })
