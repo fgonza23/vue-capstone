@@ -1,8 +1,11 @@
 <template>
     <div class="request">
       <div class="container">
+         <div class="section-title text-left title-ex1">
+              <h2 class="title-text">Requests</h2>
+              <p class="description">Please fill out info</p>
+            </div>
         <form v-on:submit.prevent="submit()">
-          <h1>Request</h1>
           <ul>
             <li class="text-danger" v-for="error in errors">{{ error }}</li>
           </ul>
@@ -26,17 +29,17 @@
             <label>Meal:</label>
             <input type="integer" class="form-control" v-model="meal">
           </div> -->
-          <div v-model="meal">
+          <div>
             <div class="form-check ">
-              <input id="radio-3" class="radio-custom form-check-input" name="radio-3" type="radio" checked>
+              <input class="radio-custom form-check-input" v-model="meal" name="meal" value="breakfast" type="radio">
               <label for="radio-3" class="radio-custom-label form-check-label">Breakfast</label>
             </div>
             <div class="form-check ">
-              <input id="radio-3" class="radio-custom form-check-input" name="radio-3" type="radio" checked>
+              <input class="radio-custom form-check-input" v-model="meal" name="meal" value="lunch" type="radio">
               <label for="radio-3" class="radio-custom-label form-check-label">Lunch</label>
             </div>
             <div class="form-check ">
-              <input id="radio-3" class="radio-custom form-check-input" name="radio-3" type="radio" checked>
+              <input class="radio-custom form-check-input" v-model="meal" name="meal" value="dinner" type="radio" checked>
               <label for="radio-3" class="radio-custom-label form-check-label">Dinner</label>
             </div>
             </div>
@@ -47,6 +50,11 @@
       </div>
     </div>
 </template>
+
+<style>
+
+
+</style>
 
 <script>
 import axios from "axios";
@@ -72,10 +80,12 @@ export default {
         meal: this.meal
       };
       axios.all
-        axios.post("http://localhost:3000/api/donation_requests", params),
-        axios.get("http://localhost:3000/api/close_box")
+        axios.post("http://localhost:3000/api/donation_requests", params)
         .then(response => {
-          this.$router.push("/donation_requests");
+          axios.get("http://localhost:3000/api/close_box")
+          .then(response2 => {
+            this.$router.push("/donation_requests");
+          })
         })
         .catch(error => {
           this.errors = error.response.data.errors;

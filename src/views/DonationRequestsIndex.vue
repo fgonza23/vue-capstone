@@ -20,44 +20,43 @@
 
      <section id="services" class="bg-gray-dark-2">
         <div class="container">
+
           <div class="count-down">
                      <div class="fun-text">
-                         <span class="counter">25</span><span>+</span>
+                         <span class="counter"></span><span> {{donation_requests.length}}</span>
                          <p>Request</p>
                      </div>
 
-                     <div class="fun-text">
-                         <span class="counter">700</span><span>+</span>
+                  <!--    <div class="fun-text">
+                         <span class="counter"></span> {{50 +}}<span></span>
                          <p>Donations</p>
-                     </div>
+                     </div> -->
 
-                     <div class="fun-text">
-                         <span class="counter">50</span><span>+</span>
+                    <!--  <div class="fun-text">
+                         <span class="counter">33</span><span>+</span>
                          <p>Lives Changed</p>
-                     </div>
+                     </div> -->
                  </div>
 
           <!-- <button class="btn btn-primary" @click="submit()">
           </button> -->
 
           
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h3 class="font-alt font-w-600 letter-spacing-2 title-extra-large text-uppercase text-black">Requests</h3>
-                    <span class="bg-base-color mt-4 mx-auto sep-line-medium-thick-long"></span>
-                </div>
-                <!-- //.col-lg-8 -->
-            </div>
+            
             <!-- //.row -->
 <!-- 
             <div class="divider divider-center divider-solid-dbl brd-primary w50 mx-auto my-5">
     <i class="fa fa-user divider-icon bg-primary text-white"></i>
   </div> -->
+          <div class="section-title text-right title-ex1">
+              <h2 class="title-text">Donation Requests</h2>
+              <p class="description">Please choose the donation you would like to select</p>
+            </div>
           
             <div class="row mt-5 pt-5">
-                <button @click="submit()" v-for="donation_request in donation_requests" class="col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
+                <button v-for="donation_request in donation_requests" @click="submit(donation_request)" class= "anim_item animated col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
                     <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
-                        <i class="fa fa-user divider-icon bg-primary text-white"></i>
+                        <i class="fa fa-heart  divider-icon bg-primary text-white"></i>
                         <!-- <button type="button" class="float-right btn btn-danger" data-toggle="modal" data-target="#exampleModal" v-on:click="setCurrentRecipe(recipe)">
                                 Details
                               </button> -->
@@ -132,9 +131,21 @@ export default {
     });
   },
   methods: {
-    submit: function() {
-      axios
-      .get("http://localhost:3000/api/open_box");
+    submit: function(inputDonationRequest) {
+      axios.delete("http://localhost:3000/api/donation_requests/" + inputDonationRequest.id)
+        .then(response => {
+          axios.get("http://localhost:3000/api/open_box")
+          .then(response2 => {
+            axios
+            .get("http://localhost:3000/api/donation_requests")
+            .then(response3 => {
+              this.donation_requests = response3.data
+            });
+          })
+        })
+         .catch(error => {
+          this.errors = error.response.data.errors;
+        });
     }
   },
   computed: {}
