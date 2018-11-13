@@ -1,8 +1,9 @@
 <template>
   <div class="donation-requests-show">
    <div class="container">
+    <h1>{{ donation_request.date }}</h1>
+    <head>{{ donation_request.meal }}</head>
     <div v-for ="donation_request in donation_requests">
-      <h2>{{ donation_request }}</h2>
     </div>
    </div>
   </div>
