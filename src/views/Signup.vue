@@ -1,7 +1,6 @@
 <template>
   <div class="signup">
     <div class="container">
-
       <div class="section-title text-left title-ex1">
         <h2 class="title-text">Signup</h2>
       </div>
@@ -20,7 +19,7 @@
             <div class="form-group col-md-12">
               <input v-model="password" type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
             </div>
-             <div class="form-group col-md-12">
+            <div class="form-group col-md-12">
               <input v-model="passwordConfirmation" type="password" class="form-control" id="exampleInputPassword" placeholder="Password confirmation">
             </div>
           </div>
@@ -38,47 +37,8 @@
            <span class="or text-center">OR</span>
             <button type="submit" class="btn btn-default btn-facebook btn-block">Log in with Facebook</button>
             <button type="submit" class="btn btn-default btn-twitter btn-block">Log in with Twitter</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-        <div class="section-title text-left title-ex1">
-          <h2 class="title-text">Signup</h2>
-          <p class="description"></p>
-        </div> -->
-
-      <!-- <form v-on:submit.prevent="submit()">
-        <ul>
-          <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
-        <div class="form-group">
-          <label>Name:</label> 
-          <input type="text" class="form-control" v-model="name">
-        </div>
-        <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
-        </div>
-        <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <div class="form-group">
-          <label>Password confirmation:</label>
-          <input type="password" class="form-control" v-model="passwordConfirmation">
-        </div>
-        <input type="submit" class="btn btn-primary" value="Submit"> -->
       </form>
+
     </div>
   </div>
 </template>

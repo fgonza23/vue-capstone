@@ -1,112 +1,32 @@
 <template>
-  
-  <!--   <router-link tag= "button" id= "button" to=/donatation_requests/:id>
-      <div class="row mt-5 pt-5">
-        
-          <div v-for="donation_request in donation_requests" class="col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
-              <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
-                  <i class="icon-Chess text-base-color title-extra-large"></i>
-                  <span class="d-block font-alt letter-spacing-2 mt-2 text-extra-large text-uppercase text-white">{{ donation_request.user }}</span>
-                  <span class="text-white">{{ donation_request.date }}</span>
-                  <span class="bg-base-color ml-lg-0 mt-3 mx-auto sep-line-thick"></span>
-                  <p class="m-0 mt-3 text-gray text-medium">{{ donation_request.meal }}</p>
-
-              </div>
-   
-          </div>
-
-      </div> 
-       </router-link> -->
-
-     <section id="services" class="bg-gray-dark-2">
-        <div class="container">
-
-          <div class="count-down">
-                     <div class="fun-text">
-                         <span class="counter"></span><span> {{donation_requests.length}}</span>
-                         <p>Request</p>
-                     </div>
-
-                  <!--    <div class="fun-text">
-                         <span class="counter"></span> {{50 +}}<span></span>
-                         <p>Donations</p>
-                     </div> -->
-
-                    <!--  <div class="fun-text">
-                         <span class="counter">33</span><span>+</span>
-                         <p>Lives Changed</p>
-                     </div> -->
-                 </div>
-
-          <!-- <button class="btn btn-primary" @click="submit()">
-          </button> -->
-
-          
-            
-            <!-- //.row -->
-<!-- 
-            <div class="divider divider-center divider-solid-dbl brd-primary w50 mx-auto my-5">
-    <i class="fa fa-user divider-icon bg-primary text-white"></i>
-  </div> -->
-          <div class="section-title text-right title-ex1">
-              <h2 class="title-text">Donation Requests</h2>
-              <p class="description">Please choose the donation you would like to select</p>
-            </div>
-          
-            <div class="row mt-5 pt-5">
-                <button v-for="donation_request in donation_requests" @click="submit(donation_request)" class= "anim_item animated col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
-                    <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
-                        <i class="fa fa-heart  divider-icon bg-primary text-white"></i>
-                        <!-- <button type="button" class="float-right btn btn-danger" data-toggle="modal" data-target="#exampleModal" v-on:click="setCurrentRecipe(recipe)">
-                                Details
-                              </button> -->
-                        <span class="card d-block font-alt letter-spacing-2 mt-2 text-extra-large text-uppercase text-black"  style="width: 18rem;">{{ donation_request.user }}</span>
-                        <span class="text-black">Date: {{ donation_request.date }}</span>
-                        <span class="bg-base-color ml-lg-0 mt-3 mx-auto sep-line-thick"></span>
-                        <p class="m-0 mt-3 text-black text-medium">{{ donation_request.meal }}</p>
-                    </div>
-                    <!-- //.px-lg-3 -->
-                  </button>
-                <!-- //.col-lg-4 -->
-            </div>
-            <!-- //.row -->
-            <<!-- div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{ currentdonation_request.user }}</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <ul>
-                          <li v-for="date in currentDonationRequest.formatted.date">{{ date }}</li>
-                        </ul>
-                        <ol>
-                          <li v-for="meal in currentDonationRequest.formatted.meal">{{ meal }}</li>
-                        </ol>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+  <section id="services" class="bg-gray-dark-2">
+    <div class="container">
+      <div class="count-down">
+        <div class="fun-text">
+           <span class="counter"></span><span> {{donation_requests.length}}</span>
+           <p>Request</p>
         </div>
-                
-        
-      <!-- <div v-for= "donation_request in donation_requests">
-        <h2>{{ donation_request }}</h2> -->
-     <!--  <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
-          <i class="icon-Chess text-base-color title-extra-large"></i>
-          <span class="d-block font-alt letter-spacing-2 mt-2 text-extra-large text-uppercase text-white">{{ donation_requests }}</span>
-      </div> -->
- 
-    </section>
-  </div>
-
-
+      </div>
+        <div class="section-title text-right title-ex1">
+          <h2 class="title-text">Donation Requests</h2>
+          <p class="description">Please choose the donation you would like to select</p>
+        </div>
+          <div class="row mt-5 pt-5">
+            <button v-for="donation_request in donation_requests" @click="submit(donation_request)" class= "anim_item animated col-lg-4 bg-gray-dark-3 border-md-0 border-bottom border-right border-gray-2" data-mh="mh-col-services">
+              <div class="px-lg-3 py-5 py-lg-4 text-center text-lg-left">
+                <i class="fa fa-heart  divider-icon bg-primary text-white"></i>
+                  <span class="card d-block font-alt letter-spacing-2 mt-2 text-extra-large text-uppercase text-black"  style="width: 18rem;">{{ donation_request.user }}</span>
+                  <span class="text-black">Date: {{ donation_request.date }}</span>
+                  <span class="bg-base-color ml-lg-0 mt-3 mx-auto sep-line-thick"></span>
+                    <p class="m-0 mt-3 text-black text-medium">{{ donation_request.meal }}</p>
+              </div>
+                    <!-- //.px-lg-3 -->
+            </button>
+                <!-- //.col-lg-4 -->
+          </div>
+        </div>
+    </div>
+  </section>
 </template>
 
 <style>

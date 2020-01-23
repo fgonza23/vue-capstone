@@ -16,7 +16,7 @@
                     <p class="description"></p>
                   </div>
           </router-link>
-      </div> 
+      </div>
 
       <div class="info text-center">
           <router-link to="/login">
@@ -28,7 +28,7 @@
                     <p class="description"></p>
                   </div>
           </router-link>
-      </div>     
+      </div>
     </dir>
 
 
@@ -49,7 +49,7 @@ export default {
   },
   created: function() {
     axios
-    .get("http://localhost:3000/api/user")
+    .get("http://localhost:3000/api/users")
     .then(function(response) {
       this.user = response.data;
     }.bind(this));

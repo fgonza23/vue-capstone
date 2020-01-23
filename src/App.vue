@@ -31,40 +31,8 @@
               <router-link class="dropdown-item" to="/signup">Signup</router-link>
               <router-link class="dropdown-item" to="/login">Login</router-link>
                <router-link class="dropdown-item" to="/logout">Logout</router-link>
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-             <!--  <ul class="dropdown-menu submenu">
-              
-                <li><a href="portfolio-fullwidth.html">Fullwidth</a></li>
-                <li><a href="portfolio-boxed-2-column.html">Boxed 2 Column</a></li>
-                <li><a href="portfolio-boxed-3-column.html">Boxed 3 Column</a></li>
-                <li><a href="portfolio-boxed-4-column.html">Boxed 4 Column</a></li>
-                <li><a href="portfolio-boxed-sidebar.html">Boxed With Sidebar</a></li>
-                </li>
-              </ul> -->
-    
-        
-                 <!--  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a> -->
-                  <!-- <ul class="dropdown-menu submenu"> -->
-                   <!--  <router-link class="dropdown-item" to="/signup">Sign up</router-link> -->
-                   <!--  <li><a href="portfolio-fullwidth.html">Fullwidth</a></li>
-                    <li><a href="portfolio-boxed-2-column.html">Boxed 2 Column</a></li>
-                    <li><a href="portfolio-boxed-3-column.html">Boxed 3 Column</a></li>
-                    <li><a href="portfolio-boxed-4-column.html">Boxed 4 Column</a></li>
-                    <li><a href="portfolio-boxed-sidebar.html">Boxed With Sidebar</a></li> -->
-                 <!--  </ul> -->
-                </li>
-
-<!-- 
-            <li class="dropdown">
-              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-              <ul class="dropdown-menu submenu">
-                <li><a href="portfolio-card-fullwidth.html">Fullwidth</a></li>
-                <li><a href="portfolio-card-boxed-2-column.html">Boxed 2 Column</a></li>
-                <li><a href="portfolio-card-boxed-3-column.html">Boxed 3 Column</a></li>
-                <li><a href="portfolio-card-boxed-4-column.html">Boxed 4 Column</a></li>
-                <li><a href="portfolio-card-boxed-sidebar.html">Boxed With Sidebar</a></li>
-              </ul>
-            </li> -->
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>             
+            </li>
           </ul>
         </li>
 
@@ -73,14 +41,11 @@
           <ul class="dropdown-menu dd_first">
             <router-link class="dropdown-item" to="/donation_requests">Donate</router-link>
               <router-link class="dropdown-item" to="/Request">Request</router-link>
-          
-              </ul>
+          </ul>
             </li>
           </ul>
         </li>
 
-       
-        <!-- header search -->
         <li class="nav-item search_hook">
           <a href="javascript:void(0)" data-toggle="modal" data-target="#searchModal" class="btn-search nav-link"><i class="fa fa-list"></i></a>
           <form  class="search_form">
@@ -92,7 +57,6 @@
     </div>
     <!-- header search ends-->
   </div>
-
 </nav>
     <!-- navbar end -->
 <div id="my-main">
@@ -103,7 +67,6 @@
   <footer class="footer footer-classic bg-dark">
     <div class="container">
       <div class="row justify-content-center">
-
         <div class="col-lg-7 col-md-8 ">
           <div class="text-center">
             <a href="">
@@ -149,18 +112,16 @@
       </div>
       <!-- COPY RIGHT -->
       <div class="copyright">
-        <hr>
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 ">
             <div class="copyRight_text text-center">
-              <p> © 2017 Copyright Nexa Bootstrap Template by <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.</p>
+              <p> © 2017 Copyright Nexa Bootstrap Template by <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>
+              </p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </footer> -->
 
 <!--   footer ends

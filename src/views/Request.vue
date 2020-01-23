@@ -25,10 +25,6 @@
             <label>Family Size</label>
             <input type="input-group-text" class="form-control" v-model="family_size">
           </div>
-          <!-- <div class="form-group">
-            <label>Meal:</label>
-            <input type="integer" class="form-control" v-model="meal">
-          </div> -->
           <div>
             <div class="form-check ">
               <input class="radio-custom form-check-input" v-model="meal" name="meal" value="breakfast" type="radio">
@@ -84,7 +80,7 @@ export default {
         .then(response => {
           axios.get("http://localhost:3000/api/close_box")
           .then(response2 => {
-            this.$router.push("/donation_requests");
+            this.$router.push("/home");
           })
         })
         .catch(error => {

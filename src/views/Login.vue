@@ -1,9 +1,9 @@
 <template>
   <div class="login">
     <div class="container">
-        <div class="section-title text-left title-ex1">
+      <div class="section-title text-left title-ex1">
           <h2 class="title-text">Login</h2>
-        </div>
+      </div>
 
         <form  class="register" v-on:submit.prevent="submit()" >
           <ul>
@@ -27,32 +27,11 @@
                 <a href="" class="btn-link">Forgot password ?</a>
               </div>
             </div>
-            <span class="or text-center">OR</span>
+            <!-- <span class="or text-center">OR</span>
             <button type="submit" class="btn btn-default btn-facebook btn-block">Log in with Facebook</button>
-            <button type="submit" class="btn btn-default btn-twitter btn-block">Log in with Twitter</button>
+            <button type="submit" class="btn btn-default btn-twitter btn-block">Log in with Twitter</button> -->
           </form>
-          <!-- <p class="form-footer">Don’t have an Account? Sign up</p> -->
 
-          <!-- icon in the input field -->
-          <!-- <div class="form-group col-md-12 input-icon">
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-          </div> -->
-
-
-     <!--  <form v-on:submit.prevent="submit()">
-        <ul>
-          <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
-        <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
-        </div>
-        <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
-      </form> -->
     </div>
   </div>
 </template>
