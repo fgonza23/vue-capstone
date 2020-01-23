@@ -54,7 +54,8 @@ export default {
     submit: function(inputDonationRequest) {
       axios.delete("http://localhost:3000/api/donation_requests/" + inputDonationRequest.id)
         .then(response => {
-          axios.get("http://localhost:3000/api/open_box")
+          axios
+          .get("http://localhost:3000/api/open_box")
           .then(response2 => {
             axios
             .get("http://localhost:3000/api/donation_requests")
